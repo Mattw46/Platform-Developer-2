@@ -35,155 +35,203 @@ SOAP API Developer Guide
 
 
 
-Module
-Custom Metadata Types Basics
+*Module*
+
+**Custom Metadata Types Basics**
+
 Learn what custom metadata types are and develop them with clicks not code.
 
 
 
-Task
-Process Automation, Logic, and Integration
+*Task*
+
+**Process Automation, Logic, and Integration**
+
 Exam Weight 27%
 
 
 
-Module
-Platform API Basics
+*Module*
+
+**Platform API Basics**
+
 Get to know the Salesforce Platform APIs and learn to integrate your data.
 
 
 
 
-Module
-Platform Events Basics
+*Module*
+
+**Platform Events Basics**
+
 Deliver custom notifications within the Salesforce platform and in external apps.
 
 
 
 
-Module
-Asynchronous Apex
+*Module*
+
+**Asynchronous Apex**
+
 Write more efficient Apex code with asynchronous processing.
 
 
 
-Link
-Dynamic Apex
+*Link*
+
+**Dynamic Apex**
+
 APEX Developer Guide
 
 
 
 
-Module
-Apex Integration Services
+*Module*
+
+**Apex Integration Services**
+
 Integrate with external apps using Apex REST and SOAP services.
 
 
 
-Task
-User Interface
+*Task*
+
+**User Interface**
+
 Exam Weight 20%
 
 
 
-Module
-Lightning Web Components for Visualforce Developers
+*Module*
+
+**Lightning Web Components for Visualforce Developers**
+
 Discover how your Visualforce knowledge applies to Lightning Web Components.
 
 
 
 
-Module
-Lightning Web Components for Aura Developers
+*Module*
+
+**Lightning Web Components for Aura Developers**
+
 Leverage your Aura components skills to learn about Lightning web components.
 
 
 
-Task
-Testing, Debugging, and Deployment
+*Task*
+
+**Testing, Debugging, and Deployment**
+
 Exam Weight 20%
 
 
-Link
-Understanding Test Data
+*Link*
+
+**Understanding Test Data**
+
 Developer Documentation
 
 
 
-Link
-Testing Custom Controllers and Controller Extensions
+*Link*
+
+**Testing Custom Controllers and Controller Extensions**
+
 Visualforce Developer Guide
 
 ~15 mins
 
 
-Module
-Lightning Web Components Tests
+*Module*
+
+**Lightning Web Components Tests**
+
 Test Lightning web components with Jest.
 
 
 
 
-Module
-Lightning Web Component Troubleshooting
+*Module*
+
+**Lightning Web Component Troubleshooting**
+
 Learn basic troubleshooting techniques for Lightning web components using Chrome DevTools.
 
 
 
-Task
-Performance
+*Task*
+
+**Performance**
+
 Exam Weight 18%
 
 
 
-Module
-Big Object Basics
+*Module*
+
+**Big Object Basics**
+
 Learn about big objects, their use cases, and how to create and query them.
 
 
 
 
-Module
-Platform Cache Basics
+*Module*
+
+**Platform Cache Basics**
+
 Reduce data retrieval times and improve your app's performance.
 
 
 
-Link
-Best Practices for Optimizing Visualforce Performance
+*Link*
+
+**Best Practices for Optimizing Visualforce Performance**
+
 Visualforce Performance: Best Practices
 
 
 
-Link
-Techniques for Optimizing Performance
+*Link*
+
+**Techniques for Optimizing Performance**
+
 Best practices for Deployments with Large Data Volumes
 
 
 
 
-Module
-Large Data Volumes
+*Module*
+
+**Large Data Volumes**
+
 Plan for and work with large data volumes within Salesforce.
 
 
 
 
-Module
-Apex Enterprise Patterns: Service Layer
+*Module*
+
+**Apex Enterprise Patterns: Service Layer**
+
 Form a durable core for your apps with reusable code and efficient API consumption.
 
 
 
 
-Module
-Apex Enterprise Patterns: Domain & Selector Layers
+*Module*
+
+**Apex Enterprise Patterns: Domain & Selector Layers**
+
 Programmatically create powerful queries, perform operations, and invoke business logic.
 
 
 
-Task
-Superbadges
+*Task*
+
+**Superbadges**
+
 Complete the following two Superbadges to unlock the final Advanced Apex Specialist Superbadge.
 
 
