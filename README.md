@@ -9,6 +9,7 @@ Preparing to take your Salesforce Platform Developer II credential? Check out th
 
 Exam guide, recommended courses, registering for your exam, etc.
 
+---
 
 *Task*
 
@@ -41,7 +42,7 @@ SOAP API Developer Guide
 
 Learn what custom metadata types are and develop them with clicks not code.
 
-
+---
 
 *Task*
 
@@ -92,7 +93,7 @@ APEX Developer Guide
 
 Integrate with external apps using Apex REST and SOAP services.
 
-
+---
 
 *Task*
 
@@ -117,7 +118,7 @@ Discover how your Visualforce knowledge applies to Lightning Web Components.
 
 Leverage your Aura components skills to learn about Lightning web components.
 
-
+---
 
 *Task*
 
@@ -158,7 +159,7 @@ Test Lightning web components with Jest.
 
 Learn basic troubleshooting techniques for Lightning web components using Chrome DevTools.
 
-
+---
 
 *Task*
 
@@ -226,7 +227,7 @@ Form a durable core for your apps with reusable code and efficient API consumpti
 
 Programmatically create powerful queries, perform operations, and invoke business logic.
 
-
+---
 
 *Task*
 
