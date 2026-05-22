@@ -50,7 +50,6 @@ global class WellnessJourneyRewardsBatch implements Database.Batchable<SObject>,
         
         //Serialize JSON
         String jsonBody = JSON.serialize(usersListMap);
-        System.debug('>>> about to send: ' + jsonBody);
         //Invoke Callout
         Integer responseCode = RewardsCalloutService.submitUsersForRewardCallout(jsonBody);
         
