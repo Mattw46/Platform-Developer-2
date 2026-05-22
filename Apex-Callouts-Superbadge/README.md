@@ -28,7 +28,7 @@ An Apex batch class named WellnessJourneyRewardsBatch identifies employees who h
 
 The batch class queries the completed Wellness Journey records of users as eligible for rewards who have completed at least 12 wellness activities within a quarter. The batch class aggregates the data of eligible employees, including their ID, name, username, and contact email. Update the execute method in the WellnessJourneyRewardsBatch class to convert the compiled data into a JSON format suitable for transmission to the external system.
 
-Update the submitUsersForRewardCallout(String jsonBody) method within the RewardsCalloutService Apex class where jsonBodyCopy is the serialized user data from the WellnessJourneyRewardsBatch class. This method should perform an HTTP callout to the /rewardsCopy path of the endpoint stored in the BalancedLiving (Name IntegrationSB__BalancedLivingCopy) named credential. The related external credential makes sure the callout is made securely.
+Update the submitUsersForRewardCallout(String jsonBody) method within the RewardsCalloutService Apex class where jsonBody is the serialized user data from the WellnessJourneyRewardsBatch class. This method should perform an HTTP callout to the /rewards path of the endpoint stored in the BalancedLiving (Name IntegrationSB__BalancedLiving) named credential. The related external credential makes sure the callout is made securely.
 
 For this challenge, use system logging to debug the response code returned from the submitUsersForRewardCallout method in the WellnessJourneyRewardsBatch class.
 
@@ -40,34 +40,34 @@ Develop a testing environment using Apex to validate the functionality of the Re
 
 Note: Do not use a static resource to complete this challenge.
 
-Implement the RewardsCalloutServiceMockCopy class to simulate responses from the external service. This class will return predefined JSON responses that mimic both successful and erroneous interactions. Create the RewardsCalloutServiceTestCopy class to systematically test the callout logic under various scenarios, such as successful data submission and response handling, as well as failure modes like API outages or bad data.
+Implement the RewardsCalloutServiceMock class to simulate responses from the external service. This class will return predefined JSON responses that mimic both successful and erroneous interactions. Create the RewardsCalloutServiceTest class to systematically test the callout logic under various scenarios, such as successful data submission and response handling, as well as failure modes like API outages or bad data.
 
-Verify that the RewardsCalloutServiceMock accurately mimics the external service’s responses, to ensure the system can handle all scenarios. Create test data for at least 12 wellness journey records within a quarter for a user. Use system logging to confirm the startDateCopy and endDateCopy for executing the batch class. Conduct tests to confirm that the HTTP callout processes and sends data correctly, using the mock to provide controlled response scenarios. Write unit tests for at least 90% code coverage for WellnessJourneyRewardsBatch and RewardsCalloutService Apex classes to ensure comprehensive testing of the callout functionality.
+Verify that the RewardsCalloutServiceMock accurately mimics the external service’s responses, to ensure the system can handle all scenarios. Create test data for at least 12 wellness journey records within a quarter for a user. Use system logging to confirm the startDate and endDate for executing the batch class. Conduct tests to confirm that the HTTP callout processes and sends data correctly, using the mock to provide controlled response scenarios. Write unit tests for at least 90% code coverage for WellnessJourneyRewardsBatch and RewardsCalloutService Apex classes to ensure comprehensive testing of the callout functionality.
 
 # Accessibility Project Billing
 
 Alignment Accounting’s commitment to inclusivity extends to ensuring that wellness programs are accessible to all employees, including those in the Deaf and Hard of Hearing (DHH) community. To support participation in onsite wellness workshops like guided meditation and yoga, Alignment Accounting provides American Sign Language (ASL) interpreters, funded initially by the company and later reimbursed by employee insurance plans.
 
-The Apex trigger, WorkshopTrigger, generates an Accessibility Project (API Name: Accessibility_Project__cCopy) record with the calculated amount whenever a workshop record is created with the DHH_Accessible__c field marked true. Your task is to complete the callBillingService method within the AccessibilityProjectBilling class.
+The Apex trigger, WorkshopTrigger, generates an Accessibility Project (API Name: Accessibility_Project__c) record with the calculated amount whenever a workshop record is created with the DHH_Accessible__c field marked true. Your task is to complete the callBillingService method within the AccessibilityProjectBilling class.
 
 You will interface with a SOAP service provided by the insurance company to submit claims for these services. The goal is to ensure accurate and timely reimbursements.
 
 To achieve this, you need to develop and configure a SOAP client that will communicate with the insurance company’s service. The client will submit billing claims including the project ID and billing amount for the ASL interpreting services.
 
-The Billing Service is exposed through a SOAP API. So, consume the WSDL provided by the billing system’s IT team, and generate a proxy class (named BillingServiceProxyCopy) to use for your callout. There is only one service method definition. It requires you to pass the following arguments.
+The Billing Service is exposed through a SOAP API. So, consume the WSDL provided by the billing system’s IT team, and generate a proxy class (named BillingServiceProxy) to use for your callout. There is only one service method definition. It requires you to pass the following arguments.
 
 Field	Value
 projectid	Accessibility Project ID
 billAmount	Accessibility Project Amount
-username	{!$Credential.BillingServiceCredential.username}Copy
-password	{!$Credential.BillingServiceCredential.password}Copy
+username	{!$Credential.BillingServiceCredential.username}
+password	{!$Credential.BillingServiceCredential.password}
 Prepare the data for submission so that it meets the format and standards required by the insurance company’s SOAP service. If the outbound call is successful, set the Accessibility Project record's status to Complete (but we won't check for this requirement).
 
 # Test Billing Callout Service
 
 With the SOAP service integration for ASL interpreter billing now in place, you need to ensure that the system operates reliably and accurately under all conditions. This includes validating the SOAP callouts, handling responses, and ensuring that data integrity and security are maintained. Develop a comprehensive test class that simulates interactions with the SOAP service. Ensure that the system can handle various scenarios effectively.
 
-Validate the functionality of the SOAP client used for ASL interpreter billing. This involves developing a mock service, BillingCalloutServiceMockCopy, to simulate responses from the insurance company's service. Implement the mock class to simulate SOAP responses from the insurance company’s service. This mock class will provide predefined responses for both successful and erroneous scenarios. Ensure that the system processes these responses correctly and can handle any potential errors effectively.
+Validate the functionality of the SOAP client used for ASL interpreter billing. This involves developing a mock service, BillingCalloutServiceMock, to simulate responses from the insurance company's service. Implement the mock class to simulate SOAP responses from the insurance company’s service. This mock class will provide predefined responses for both successful and erroneous scenarios. Ensure that the system processes these responses correctly and can handle any potential errors effectively.
 
-Create an Apex test class called BillingCalloutServiceTestCopy to systematically validate the SOAP callout logic. Ensure that the system can handle data correctly, process responses, and manage errors efficiently. Write unit tests for at least 90% code coverage for AccessibilityProjectBilling and BillingServiceProxy Apex classes to ensure comprehensive testing of the SOAP callout functionality.
+Create an Apex test class called BillingCalloutServiceTest to systematically validate the SOAP callout logic. Ensure that the system can handle data correctly, process responses, and manage errors efficiently. Write unit tests for at least 90% code coverage for AccessibilityProjectBilling and BillingServiceProxy Apex classes to ensure comprehensive testing of the SOAP callout functionality.
 
